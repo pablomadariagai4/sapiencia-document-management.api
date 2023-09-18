@@ -19,10 +19,4 @@ export default class RadicadoDetail extends BaseModel {
 
   @column()
   public DRA_NOMBRE_APELLIDOS: string;
-
-  @column.dateTime({ autoCreate: true })
-  public createdAt: DateTime;
-
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt: DateTime;
 }
