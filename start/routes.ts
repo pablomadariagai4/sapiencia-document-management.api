@@ -29,9 +29,17 @@ Route.group(() => {
     "/get-by-grouper/:grouper",
     "GenericListController.getGenericListByGrouper"
   );
-  Route.get("/get-by-parent", "GenericListController.getGenericListByAdditionalField");
-  Route.get("/get-by-groupers", "GenericListController.getGenericListByGroupers");
+  Route.get(
+    "/get-by-parent",
+    "GenericListController.getGenericListByAdditionalField"
+  );
+  Route.get(
+    "/get-by-groupers",
+    "GenericListController.getGenericListByGroupers"
+  );
 }).prefix("/api/v1/generic-list");
 // .middleware("auth");
 
-
+Route.group(() => {
+  Route.resource("/radicado-details", "RadicadoDetailsController").apiOnly();
+}).prefix("/api/v1/document-management");
