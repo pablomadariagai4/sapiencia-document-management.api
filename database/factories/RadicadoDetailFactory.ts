@@ -3,10 +3,11 @@ import Factory from "@ioc:Adonis/Lucid/Factory";
 
 export default Factory.define(RadicadoDetail, ({ faker }) => {
   return {
-    DRA_RADICADO: faker.random.numeric(12),
-    DRA_FECHA_RADICADO: faker.date.past(),
-    DRA_RADICADO_ORIGEN: faker.random.numeric(12),
-    DRA_FECHA_ORIGEN: faker.date.past(),
-    DRA_NOMBRE_APELLIDOS: faker.name.fullName(),
+    dra_codigo: parseInt(faker.random.numeric(2)),
+    dra_radicado: faker.random.numeric(12),
+    dra_fecha_radicado: faker.date.past(),
+    dra_radicado_origen: faker.random.numeric(12),
+    dra_fecha_origen: faker.date.past(),
+    dra_nombre_apellidos: faker.person.fullName(),
   };
 }).build();
